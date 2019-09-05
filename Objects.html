@@ -1,0 +1,36 @@
+<html>
+
+    <head></head>
+
+    <body>
+       
+ <script type="text/javascript">
+
+	var vlist = ["a","e","i","o","u"];
+        var valueToCount = countVowels("agnestwesiime");
+        window.alert(valueToCount);
+        function countVowels(word){
+        var count = 0;
+        var vowels = ""
+	var repeatingLetters=""
+        for(var n = 0;n<word.length; n++){
+        if(word.slice(0,n).indexOf(word[n])  !== -1){
+             if(repeatingLetters.indexOf(word[n]) === -1){
+             repeatingLetters += word[n];
+             count++
+            }
+        }
+    for(var i=0;i<vlist.length;i++){
+    if(word[n] === vlist[i]){
+    if(vowels.indexOf(word[n]) === -1){
+    vowels += word[n];
+    }
+    }   
+    }
+    }
+    return [vowels,count]
+    window.alert("Number of vowels is "+count.toString());
+    }
+    </script>
+    </body>
+    </html>
